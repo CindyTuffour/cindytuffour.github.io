@@ -54,6 +54,17 @@ baseurl: ""
 #
 
 permalink: /:title/
+markdown:       kramdown
+highlighter:    rouge
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
@@ -76,7 +87,13 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-
+  - jekyll-mentions
+  - jekyll-gist
+  - jekyll-paginate
+  
+jekyll-mentions:
+    base_url: https://github.com
+    
 # Exclude these files from your production _site
 exclude:
   - Gemfile
